@@ -1,15 +1,7 @@
 const menu = document.querySelector('.nav__menu'),
-close = document.querySelector('.nav__close'),
-navList = document.querySelector('.nav__list'),
-drop = document.querySelectorAll('.dropdown');
-
-// menu.addEventListener('click', () => {
-//   menu.src = "images/icon-close-menu.svg";
-// })
-
-// function chgBg() {
-//   document.body.style.backgroundColor = '#000';
-// }
+      close = document.querySelector('.nav__close'),
+      navList = document.querySelector('.nav__list'),
+      drop = document.querySelectorAll('.dropdown');
 
 
 // menu toggle
@@ -30,7 +22,9 @@ drop.forEach(n => n.addEventListener('click', () => {
 
   if (n.classList.contains('active')) {
     dropCon.classList.add('active');
-  } else {
-    dropCon.classList.remove('active')
+  } 
+  else {
+    dropCon.classList.remove('active');
   }
-}))
+
+}));

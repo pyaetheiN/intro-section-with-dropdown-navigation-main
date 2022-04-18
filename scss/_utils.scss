@@ -1,22 +1,40 @@
 @import "_functions.scss";
+@import "_mixins.scss";
 
 // buttons
 .btn{
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 1rem 1.5rem;
-  border-radius: rem(15);
-  border: 1px solid $black;
+  padding: 0.8rem 1.5rem;
+  border-radius: rem(10);
   transition: 0.3s;
   font-weight: 700;
+
+  &__ghost{
+    border: 2px solid $light-gray;
+
+    &:hover{
+      border: 2px solid $black;
+    }
+  }
   
   &__fill{
     background-color: $black;
     color: $white;
+    border: 1px solid $black;
+    margin-top: 1.5rem;
+    font-size: 0.9125em;
+
+    @include lg {
+      font-size: 0.75em;
+    }
 
     &:hover{
       background-color: $white;
       color: $black;
+    }
+
+    @include lg {
+      margin-top: 2.5rem;
     }
   }
 }
