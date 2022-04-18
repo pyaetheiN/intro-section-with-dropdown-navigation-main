@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="home">
+      <header class="header">
+        <nav class="nav">
+          <img src="images/logo.svg" alt="logo" class="logo">
+          <!-- ==== toggle ===== -->
+          <div class="nav__menu"></div>
+          <!-- <img src="images/icon-menu.svg" alt="menu-icon" class="nav__menu">
+          <img src="images/icon-close-menu.svg" alt="close-icon" class="nav__close"> -->
+          
+          <!-- ===== nav-list ===== -->
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link dropdown">
+                <span>Features</span>
+                <svg class="arrow" width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
+                </svg>
+              </a>
+
+              <div class="dropdown__container">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" aria-label="dropdown-link">
+                      <img src="images/icon-todo.svg" alt="todo-icon" class="dropdown__icon">
+                      <span>Todo List</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" aria-label="dropdown-link">
+                      <img src="images/icon-calendar.svg" alt="calendar-icon" class="dropdown__icon">
+                      <span>Calendar</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" aria-label="dropdown-link">
+                      <img src="images/icon-reminders.svg" alt="reminders-icon" class="dropdown__icon">
+                      <span>Reminders</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" aria-label="dropdown-link">
+                      <img src="images/icon-planning.svg" alt="planning-icon" class="dropdown__icon">
+                      <span>Planning</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link dropdown">
+                <span>Company</span>
+                <svg class="arrow" width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
+                </svg>
+              </a>
+
+              <div class="dropdown__container">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" aria-label="dropdown-link">
+                      History
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" aria-label="dropdown-link">
+                      Our Team
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" aria-label="dropdown-link">
+                      Blog
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Careers</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">About</a>
+            </li>
+          </ul>
+          <ul class="nav__account">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Login</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link btn btn__ghost">Register</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="home__content">
+        <picture>
+          <source media="(max-width: 968px)" srcset="images/image-hero-mobile.png">
+          <source media="(min-width: 969px)" srcset="images/image-hero-desktop.png">
+          <img src="images/image-hero-mobile.png" alt="banner" class="home__banner">
+        </picture>
+        <div class="home__text">
+          <h1 class="home__title">Make remote work</h1>
+          <p class="home__desc">
+            Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.
+          </p>
+          <a href="#" class="btn btn__fill">Learn more</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__brands">
+      <li class="footer__brand">
+        <img src="images/client-databiz.svg" alt="databiz-logo" class="footer__logo">
+      </li>
+      <li class="footer__brand">
+        <img src="images/client-audiophile.svg" alt="audiophile-logo" class="footer__logo">
+      </li>
+      <li class="footer__brand">
+        <img src="images/client-meet.svg" alt="meet-logo" class="footer__logo">
+      </li>
+      <li class="footer__brand">
+        <img src="images/client-maker.svg" alt="maker-logo" class="footer__logo">
+      </li>
+    </ul>
+  </footer>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>

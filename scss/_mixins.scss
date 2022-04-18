@@ -1,0 +1,11 @@
+@mixin lg {
+  @media screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}

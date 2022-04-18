@@ -1,0 +1,174 @@
+@import "_config.scss";
+@import "_utils.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 18px;
+  font-family: 'Epilogue', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* changing background color upon clicking menu */
+body.active{
+  background-color: rgba(0,0,0,0.7);
+
+  img{
+    filter: brightness(50%);
+  }
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+// *
+img{
+  max-width: 100%;
+}
+main{
+  overflow: hidden;
+}
+.logo{
+  width: rem(84);
+  height: rem(27);
+}
+// ===== navigation ===== \\
+.header{
+  height: rem(70);
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+.nav{
+  display: flex;
+  
+  &__list{
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: $white;
+    min-height: 100vh;
+    width: rem(250);
+    padding: 5rem 1rem 0;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  &__list.active{
+    right: 0;
+  }
+  &__account{
+    display: none;
+  }
+  &__menu{
+    margin-left: auto;
+    z-index: 999;
+    width: rem(50);
+    height: rem(50);
+    background-image: url("../images/icon-menu.svg");
+    background-repeat: no-repeat;
+    margin-right: rem(-15);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  &__menu.active{
+    background-image: url("../images/icon-close-menu.svg");
+  }
+  &__item{
+    margin-bottom: 2rem;
+  }
+  .arrow{
+    margin-left: 0.5rem;
+    transition: 0.3s;
+  }
+  .dropdown{
+  
+    &__container{
+      display: none;
+    }
+    &__list{
+      margin: 1.5rem 0 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  .dropdown.active{
+
+    .arrow{
+      transform: rotate(180deg);
+    }
+  }
+  // ==== separate containers ===== \\
+  .dropdown__container.active{
+    display: block;
+  }
+}
+
+// ===== home ===== \\
+
+.home{
+
+  &__content{
+    max-width: rem(968);
+    margin: 0 auto;
+
+    @include lg {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  &__banner{
+
+    @include lg {
+      max-width: 350px;
+    }
+  }
+  &__text{
+    margin: 2rem 0.5rem 2.5rem;
+    text-align: center;
+
+    @include lg {
+      text-align: initial;
+      max-width: 40%;
+      margin: 2rem auto 2.5rem;
+    }
+  }
+  &__title{
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  &__desc{
+    font-size: 0.9125em;
+    line-height: 1.4;
+  }
+}
+.footer{
+  margin: 0 1rem;
+
+  &__brands{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &__brand{
+
+    &:nth-of-type(1){
+      width: rem(75);
+    }
+    &:nth-of-type(2){
+      width: rem(45);
+    }
+    &:nth-of-type(3),
+    &:nth-of-type(4){
+      width: rem(55);
+    }
+  }
+}

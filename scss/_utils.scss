@@ -1,0 +1,22 @@
+@import "_functions.scss";
+
+// buttons
+.btn{
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: rem(15);
+  border: 1px solid $black;
+  transition: 0.3s;
+  font-weight: 700;
+  
+  &__fill{
+    background-color: $black;
+    color: $white;
+
+    &:hover{
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
