@@ -46,12 +46,24 @@ Users should be able to:
 
 ### What I learned
 
-I realized that making menu toggle using images and not with icons as images are more scalable.
+- Making content cover the whole viewport height for larger screens
+- Making image bigger using `transform: scale(1.3)`
+- I realized that making menu toggle using images and not with icons as images are more scalable.
 
 ```html
 <div class="nav__menu"></div>
 ```
 ```css
+/* covering content according to vh */
+.home{
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+}
+/* making banner larger */
+.home__banner{
+  transform: scale(1.3);
+}
 /* menu toggle */
 .nav__menu{
   width: rem(32);
@@ -64,10 +76,6 @@ I realized that making menu toggle using images and not with icons as images are
   background-image: url("../images/icon-close-menu.svg");
   width: rem(26);
   height: rem(26);
-}
-/* making banner larger */
-.home__banner{
-  transform: scale(1.3);
 }
 ```
 ```js

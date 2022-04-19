@@ -91,6 +91,10 @@ img {
   max-width: 100%;
 }
 
+main {
+  display: block;
+}
+
 .header {
   padding: 0 1rem;
 }
@@ -310,6 +314,16 @@ img {
   display: block;
 }
 
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: calc(100vh - 70px);
+}
+
 .home__content {
   max-width: 54.25rem;
   margin: 0 auto;
@@ -324,7 +338,6 @@ img {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    margin-top: 2rem;
   }
 }
 
