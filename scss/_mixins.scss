@@ -1,3 +1,9 @@
+@mixin xl {
+  @media screen and (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
 @mixin lg {
   @media screen and (min-width: #{$screen-lg-min}) {
     @content;

@@ -15,6 +15,10 @@ body{
   min-height: 100vh;
   transition: background 0.3s;
   overflow-x: hidden;
+
+  @include xl {
+    font-size: 20px;
+  }
 }
 
 /* changing background color upon clicking menu */
@@ -41,6 +45,10 @@ img{
 // ===== navigation ===== \\
 .header{
   padding: 0 1rem;
+
+  @include lg {
+    padding: 0 2rem;
+  }
 }
 .nav{
   display: flex;
@@ -56,7 +64,6 @@ img{
     position: absolute;
     top: 0;
     right: -100%;
-    overflow-x: hidden;
     background-color: $white;
     min-height: 100vh;
     width: rem(250);
@@ -140,6 +147,9 @@ img{
         color: $black;
       }
     }
+    @include xl {
+      font-size: 0.75em;
+    }
   }
   .arrow{
     margin-left: 0.5rem;
@@ -206,7 +216,7 @@ img{
 .home{
 
   &__content{
-    max-width: rem(800);
+    max-width: rem(868);
     margin: 0 auto;
 
     @include lg {
@@ -214,8 +224,17 @@ img{
       flex-direction: row-reverse;
       margin-top: 2rem;
     }
+
+    @include xl {
+      max-width: rem(1124);
+    }
   }
   &__banner{
+
+    @include xl {
+      transform: scale(1.3);
+      padding-top: 5rem;
+    }
 
     @include lg {
       max-width: rem(350);
@@ -230,15 +249,20 @@ img{
       max-width: 45%;
       margin: 6rem auto 2rem 0;
     }
+    @include xl {
+      margin: 8rem auto 2rem 0;
+    }
   }
   &__title{
     font-size: 2em;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5em;
 
     @include lg {
-      font-size: 3em;
-      margin-bottom: 2rem;
+      font-size: 3.2em;
+    }
+    @include xl {
+      font-size: 3.8em;
     }
   }
   &__desc{
@@ -246,8 +270,11 @@ img{
     line-height: 1.4;
 
     @include lg {
-      font-size: 0.75em;
+      font-size: 0.8125em;
       color: $medium-gray;
+    }
+    @include xl {
+      font-size: 1em;
     }
   }
 }
@@ -257,6 +284,9 @@ img{
 
   @include lg {
     padding-top: 4.5rem;
+  }
+  @include xl {
+    padding-top: 7rem;
   }
 
   &__brands{

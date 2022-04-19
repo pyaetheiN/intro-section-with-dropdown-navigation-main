@@ -4,13 +4,13 @@
 // buttons
 .btn{
   display: inline-block;
-  padding: 0.8rem 1.5rem;
   border-radius: rem(10);
   transition: 0.3s;
   font-weight: 700;
 
   &__ghost{
     border: 2px solid $light-gray;
+    padding: 0.8rem 1.5rem;
 
     &:hover{
       border: 2px solid $black;
@@ -21,20 +21,22 @@
     background-color: $black;
     color: $white;
     border: 1px solid $black;
+    padding: 1rem 1.5rem;
     margin-top: 1.5rem;
     font-size: 0.9125em;
 
     @include lg {
       font-size: 0.75em;
+      margin-top: 2rem;
+    }
+    @include xl {
+      font-size: 1em;
+      margin-top: 2.5rem;
     }
 
     &:hover{
       background-color: $white;
       color: $black;
-    }
-
-    @include lg {
-      margin-top: 2.5rem;
     }
   }
 }
