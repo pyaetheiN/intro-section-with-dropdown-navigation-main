@@ -219,7 +219,7 @@ main{
 .home{
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 70px); // *
+  min-height: calc(100vh - 70px); // * rem doesn't work in calc()
 
   &__content{
     max-width: rem(868);
