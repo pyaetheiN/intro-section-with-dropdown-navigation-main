@@ -52,18 +52,23 @@ I realized that making menu toggle using images and not with icons as images are
 <div class="nav__menu"></div>
 ```
 ```css
-  .nav__menu{
-    width: rem(32);
-    height: rem(18);
-    background-image: url("../images/icon-menu.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .nav__menu.active{
-    background-image: url("../images/icon-close-menu.svg");
-    width: rem(26);
-    height: rem(26);
-  }
+/* menu toggle */
+.nav__menu{
+  width: rem(32);
+  height: rem(18);
+  background-image: url("../images/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav__menu.active{
+  background-image: url("../images/icon-close-menu.svg");
+  width: rem(26);
+  height: rem(26);
+}
+/* making banner larger */
+.home__banner{
+  transform: scale(1.3);
+}
 ```
 ```js
 menu.addEventListener('click', () => {
