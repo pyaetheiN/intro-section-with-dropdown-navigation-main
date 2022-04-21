@@ -196,6 +196,7 @@ main{
       }
     }
     &__icon{
+      transform: translateY(-1px);
       
       @include lg {
         width: rem(12);

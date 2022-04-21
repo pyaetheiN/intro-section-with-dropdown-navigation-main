@@ -299,6 +299,11 @@ main {
   }
 }
 
+.nav .dropdown__icon {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
 @media screen and (min-width: 969px) {
   .nav .dropdown__icon {
     width: 0.75rem;
