@@ -49,6 +49,7 @@ Users should be able to:
 - Making content cover the whole viewport height for larger screens
 - Making image bigger using `transform: scale(1.3)`
 - I realized that making menu toggle using images and not with icons as images are more scalable.
+- Closing navbar and dropdown upon clicking outside
 
 ```html
 <div class="nav__menu"></div>
@@ -79,9 +80,43 @@ Users should be able to:
 }
 ```
 ```js
-menu.addEventListener('click', () => {
-  menu.classList.toggle('active');
-})
+// dropdown menu
+
+drop.forEach(n => n.addEventListener('click', (e) => {
+  e.stopPropagation();  // The stopPropagation() method allows you to prevent propagation of the current event.
+  n.classList.toggle('active');
+  
+  const dropCon = n.nextElementSibling;
+
+  if (n.classList.contains('active')) {
+    dropCon.classList.add('active');
+  } 
+  else {
+    dropCon.classList.remove('active');
+  } 
+
+}));
+
+
+// close nav-menu and dropdown when clicked outside
+
+document.body.addEventListener('click', (e) => {
+
+  if(e.target !== menu && e.target !== navList) {
+    menu.classList.remove('active');
+    navList.classList.remove('active');
+    document.body.classList.remove('active');
+  }
+
+  // removing dropdown
+  drop.forEach(n => {
+    n.classList.remove('active');
+
+    const dropCon = n.nextElementSibling;
+    dropCon.classList.remove('active');
+  })
+
+});
 ```
 
 ### Continued development

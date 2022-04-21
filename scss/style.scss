@@ -235,6 +235,13 @@ main{
       max-width: rem(1124);
     }
   }
+  &__banners{
+
+    @include sm {
+      display: flex;
+      justify-content: center;
+    }
+  }
   &__banner{
 
     @include lg {
